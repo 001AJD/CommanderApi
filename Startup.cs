@@ -30,6 +30,9 @@ namespace Commander
 			services.AddDbContext<CommanderContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CommanderConnection")));
 
 			services.AddControllers();
+
+			services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 			services.AddScoped<ICommanderRepo, SqlCommanderRepo>();
 		}
 
