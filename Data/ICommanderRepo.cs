@@ -6,9 +6,12 @@ namespace Commander.Data
 	public interface ICommanderRepo
 	{
 		bool SaveChanges();
-		IEnumerable<Command> GetAllCommand(); 
+		IEnumerable<Command> GetAllCommand();
 		Command GetCommandById(int id);
 		void CreatCommand(Command cmd);
 		void UpdateCommand(Command cmd);
+
+		void DeleteCommand(Command cmd);
+
 	}
 }
